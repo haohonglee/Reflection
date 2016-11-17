@@ -1,0 +1,36 @@
+package freesource.reflection.myReflection;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+/**
+ * User: Fantasy
+ * Date: 2016-11-17
+ * Time: 23:19
+ */
+
+/**
+ * Invoke method on unknown object
+ */
+public class ReflectionHelloWorld2 {
+    public static void main(String[] args) {
+        Foo f = new Foo();
+        Method method;
+        try {
+            method = f.getClass().getMethod("print", new Class<?>[0]);
+            method.invoke(f);
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class Foo2 {
+    public void print() {
+        System.out.println("abc");
+    }
+}
