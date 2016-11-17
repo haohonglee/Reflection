@@ -8,8 +8,6 @@ Introspection is the ability of a program to examine the type or properties of a
 Reflection is the ability of a program to examine and modify the structure and behavior of an object at runtime.
 From their definitions, introspection is a subset of reflection. Some languages support introspection, but do not support reflection, e.g., C++.
 
-reflection-introspection
-
 2. Why do we need reflection?
 
 Reflection enables us to:
