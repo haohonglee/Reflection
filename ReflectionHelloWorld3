@@ -1,0 +1,40 @@
+package freesource.reflection.myReflection;
+
+/**
+ * User: Fantasy
+ * Date: 2016-11-17
+ * Time: 23:27
+ */
+
+/**
+ * Create object from Class instance
+ */
+public class ReflectionHelloWorld3 {
+    public static void main(String[] args) {
+        // Create instance of "Class"
+        Class<?> cl = null;
+        try {
+            cl = Class.forName("freesource.reflection.myReflection.Foo3");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        // Create instance of "Foo3"
+        Foo3 f = null;
+        try {
+            f = (Foo3) cl.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        f.print();
+    }
+}
+
+class Foo3 {
+    public void print() {
+        System.out.println("abc");
+    }
+}
