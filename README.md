@@ -1,4 +1,5 @@
 # Reflection
+
 A program that can analyze the capabilities of classes is called reflective.
 
 1. What is reflection?
@@ -16,8 +17,7 @@ Examine an object's class at runtime
 Construct an object for a class at runtime
 Examine a class's field and method at runtime
 Invoke any method of an object at runtime
-Change accessibility flag of Constructor, Method and Field
-etc.
+Change accessibility flag of Constructor, Method and Field etc.
 Reflection is the common approach of famework.
 
 For example, JUnit use reflection to look through methods tagged with the @Test annotation, and then call those methods when running the unit test. (Here is a set of examples of how to use JUnit.)
